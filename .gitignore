@@ -1,0 +1,15 @@
+*.py[co]
+.Python
+.DS_Store
+assets/
+bin/
+include/
+lib/
+man/
+src/
+share/
+__pycache__/
+.env*
+pip-selfcheck.json
+venv/
+bbflask.egg-info/
