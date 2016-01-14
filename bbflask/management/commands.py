@@ -27,7 +27,8 @@ def shell(config):
     except ImportError:
         pass
 
-    code.interact(None, local=context)
+    with context[u'app'].app_context():
+        code.interact(None, local=context)
 
 
 @click.command()
@@ -37,4 +38,3 @@ def shell(config):
 def run(config, host, port):
     '''Start up the development server.'''
     config.app.run(host=host, port=port)
-
