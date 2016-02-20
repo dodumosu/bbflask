@@ -19,7 +19,7 @@ from bbflask.management.decorators import pass_config
 def cli(config):
     '''Management script for bbflask'''
     if not getattr(config, u'app', None):
-        config.app = create_app()
+        config.app = create_app(u'bbflask')
 
 # subcommands
 cli.add_command(commands.run)
